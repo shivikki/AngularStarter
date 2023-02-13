@@ -18,3 +18,10 @@ $my-custom-theme: mat-light-theme(
 			$my-custom-warn);
 
 @include angular-material-theme($my-custom-theme);
+
+button{
+	cursor: pointer;
+}
+label{
+	font-weight: bold;
+}

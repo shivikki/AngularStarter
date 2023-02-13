@@ -1,0 +1,33 @@
+<div class="sidebar container" *ngIf="isOpen">
+    <h2>Image Details</h2>
+
+    <div class="mb-3">
+        <div class="my-2">
+            <label for="imgname" class="form-label">Image name</label>
+            <input type="text" class="form-control" id="imgname" value="{{imgSelected.imgName}}"
+            name="imgname" [(ngModel)]="imgSelected.imgName">
+        </div>
+
+        <div class="my-2">
+            <label for="imgname" class="form-label">Image Caption</label>
+            <textarea type="text" class="form-control" id="imgname" value="{{imgSelected.caption}}"
+            name="imgSelected.caption" [(ngModel)]="imgSelected.caption"></textarea>
+        </div>
+
+        <div class="my-2">
+            <label for="imgname" class="form-label">Height :</label>
+            <span>{{imgSelected.height}}</span>
+        </div>
+
+        <div class="my-2">
+            <label for="imgname" class="form-label">Width :</label>
+            <span>{{imgSelected.width}}</span>
+        </div>
+    </div>
+    <br>
+    <div>
+        <button mat-raised-button color="primary" (click)="saveSideBar()">Save</button>
+
+        <button mat-raised-button color="accent" style="float:right" (click)="closeSideBar()">Close</button>
+    </div>
+</div>

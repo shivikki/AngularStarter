@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonService } from './services/common.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularProject';
+
+  public isOpen=false;
+  constructor(public commonServ:CommonService) { 
+    this.commonServ.isOpen.subscribe((v)=>{
+      this.isOpen=v;
+    })
+  }
 }

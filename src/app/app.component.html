@@ -1,16 +1,9 @@
-<button mat-raised-button color="warn">Warn</button>
 
-<button mat-raised-button color="primary">Primary</button>
-
-<div class="alert alert-primary" role="alert">
-  A simple primary alert—check it out!
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="row container " >
+  <div [ngClass]="isOpen ? 'col-lg-4 col-md-4 col-sm-4' : ''">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div [ngClass]="isOpen ? 'col-lg-8 col-md-8 col-sm-8' : 'col-lg-10 col-md-10 col-sm-10 offset-1'">
+    <router-outlet></router-outlet>
   </div>
 </div>
